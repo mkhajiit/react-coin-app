@@ -5,11 +5,11 @@ import Coins from "./routes/Coins"
 function Router(){
     return<BrowserRouter>
         <Switch>
-            <Route path="/:coinId">
-                <Coin />
-            </Route>
-            <Route path="/">
+            <Route path={`${process.env.PUBLIC_URL}/`}>
                 <Coins />
+            </Route>
+            <Route path={"/:coinId"}>
+                <Coin />
             </Route>
         </Switch>
     </BrowserRouter>
